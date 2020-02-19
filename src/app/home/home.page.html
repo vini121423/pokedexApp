@@ -1,20 +1,106 @@
 <ion-header translucent>
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
     <ion-title>
-      Blank
+      Pokedex App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen color="dark">
+  <ion-searchbar placeholder="Buscar Pokemons" color="medium"></ion-searchbar>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+  <ion-item-sliding>
+    <ion-item color="dark">
+      <ion-chip slot="start">
+        <ion-label color="success">001</ion-label>
+      </ion-chip>
+      <ion-label>
+         <div>
+          <h2>Bulbasaur</h2>
+          <ion-badge color="success">Grass</ion-badge>
+          <ion-badge color="tertiary">Poison</ion-badge>
+         </div>
+      </ion-label>
+      <ion-thumbnail slot="end">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
+      </ion-thumbnail>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="unread(item)" color="warning">Alterar</ion-item-option>
+      <ion-item-option (click)="unread(item)" color="danger">Excluir</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+
+  <ion-item-sliding>
+    <ion-item color="dark">
+      <ion-chip slot="start">
+        <ion-label color="success">004</ion-label>
+      </ion-chip>
+      <ion-label>
+         <div>
+          <h2>Charmander</h2>
+          <ion-badge color="danger">Fire</ion-badge>
+         </div>
+      </ion-label>
+      <ion-thumbnail slot="end">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png">
+      </ion-thumbnail>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="unread(item)" color="warning">Alterar</ion-item-option>
+      <ion-item-option (click)="unread(item)" color="danger">Excluir</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+
+  <ion-item-sliding>
+    <ion-item color="dark">
+      <ion-chip slot="start">
+        <ion-label color="success">007</ion-label>
+      </ion-chip>
+      <ion-label>
+         <div>
+          <h2>Squirtle</h2>
+          <ion-badge color="primary">Water</ion-badge>
+         </div>
+      </ion-label>
+      <ion-thumbnail slot="end">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png">
+      </ion-thumbnail>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="unread(item)" color="warning">Alterar</ion-item-option>
+      <ion-item-option (click)="unread(item)" color="danger">Excluir</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+
+  <ion-item-sliding>
+    <ion-item color="dark">
+      <ion-chip slot="start">
+        <ion-label color="success">025</ion-label>
+      </ion-chip>
+      <ion-label>
+         <div>
+          <h2>Squirtle</h2>
+          <ion-badge color="warning">Eletric</ion-badge>
+         </div>
+      </ion-label>
+      <ion-thumbnail slot="end">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png">
+      </ion-thumbnail>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="unread(item)" color="warning">Alterar</ion-item-option>
+      <ion-item-option (click)="unread(item)" color="danger">Excluir</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+
+
+  
+
+
 </ion-content>
