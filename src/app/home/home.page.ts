@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomePage {
   public pokemonList: any = [];
+  public listagemDePokemons: any = [];
   public qtdePokemons:number;
   
   public page = 1; 
@@ -47,8 +48,10 @@ export class HomePage {
       for(let pokemon of listaPokemons) {
         this.apiService.getOne(pokemon.url).subscribe(dadosPokemons => {
           this.pokemonList.push(dadosPokemons);
+		  
+		  this.ordernacao();
         });
-
+                
       }
 
     });
@@ -62,6 +65,18 @@ export class HomePage {
    public paginaAnterior(){
 	  this.apiUrl = this.previous;
 	  this.listarPokemons(this.page - 1);
+  }
+  
+  private ordernacao(){
+	 this.pokemonList.sort((a,b) =>{
+	 if(a.id > b.id){
+        return 1;
+	 } 
+     if(a.id < b.id){
+        return -1;
+	 }	
+      return 0;	 
+	 });
   }
   
 
